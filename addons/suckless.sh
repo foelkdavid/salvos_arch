@@ -5,9 +5,9 @@ mkdir ~/.suckless &&
 sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk &&
 
 ###cloning packages
-git clone -C ~/.suckless/ https://git.suckless.org/dwm &&
-git clone -C ~/.suckless/ https://git.suckless.org/st &&
-#git clone -C ~/.suckless/ https://git.suckless.org/slock &&
+git clone https://git.suckless.org/dwm ~/.suckless/dwm &&
+git clone https://git.suckless.org/st ~/.suckless/st &&
+#git clone https://git.suckless.org/slock ~/.suckless/slock &&
 
 ###creating .xinitrc
 echo "exec dwm" >> ~/.xinitrc &&
