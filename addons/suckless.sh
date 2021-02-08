@@ -1,8 +1,8 @@
 #!/bin/bash
-mkdir /home/.suckless &&
+mkdir ~/.suckless &&
 
 ###fetching dependencies
-sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama lixft webkit2gtk &&
+sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk &&
 
 ###cloning packages
 git clone -C ~/.suckless/ https://git.suckless.org/dwm &&
