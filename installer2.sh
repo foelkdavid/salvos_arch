@@ -26,16 +26,12 @@ echo $CHN >> /etc/hostname &&
 echo "127.0.0.1 localhost" >> /etc/hosts &&
 echo "::1" >> /etc/hosts &&
 echo "127.0.1.1 $CHN.localdomain $CHN" >> /etc/hosts &&
-echo "done!"
-
-echo "setting up grub" &&
-read -p "Please enter path for filesystem (eg. /dev/sda) : " FSPI &&
-grub-install --target=i386-pc $FSPI &&
-grub-mkconfig -o /boot/grub/grub.cfg &&
 echo "done!" &&
 
-echo "installing microcode INTEL" &&
-pacman -S intel-ucode &&
+echo "installing microcode" &&
+
+read -p "Please enter your CPU manufacturer:  [ amd | intel ]" SYSBRND && 
+pacman -S $SYSBRND-ucode &&
 echo "done!" &&
 
 echo "enabling dhcpcd"
