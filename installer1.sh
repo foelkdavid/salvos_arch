@@ -13,7 +13,7 @@ genfstab -U /mnt >> /mnt/etc/fstab &&
 echo "done." &&
 
 echo "copying arch-installer to new system:" &&
-cp -r /root/arch-installer /mnt/root/ &&
+cp -r /root/salvos_arch /mnt/root/ &&
 echo "done!" &&
 
 echo "system is ready for further configuration." &&
